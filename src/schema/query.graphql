@@ -1,0 +1,4 @@
+type Query {
+  fetchUserBankAccounts(page: Int, perPage: Int): BankAccounts!
+  fetchBanks(country: String!, page: Int, perPage: Int): Banks!
+}

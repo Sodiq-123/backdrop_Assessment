@@ -1,0 +1,52 @@
+type Pagination {
+  count: Int!
+  hasNextPage: Boolean!
+}
+
+type User {
+  id: ID!
+  fullname: String!
+  email: String!
+  isVerified: Boolean!
+}
+
+type Login {
+  user: User!
+  token: ID!
+}
+
+type BankAccount {
+  id: ID!
+  account_number: String!
+  bank_code: String!
+  account_name: String!
+  is_verified: Boolean!
+  user: User!
+}
+
+type BankAccounts {
+  data: [BankAccount]!
+  pagination: Pagination!
+}
+
+type Bank {
+  name: String!
+  slug: String!
+  code: String!
+  longcode: String!
+  gateway: String!
+  pay_with_bank: Boolean!
+  active: Boolean!
+  is_deleted: Boolean!
+  country: String!
+  currency: String!
+  type: String!
+  id: Int!
+  createdAt: String!
+  updatedAt: String!
+}
+
+type Banks {
+  data: [Bank]!
+  pagination: Pagination!
+}

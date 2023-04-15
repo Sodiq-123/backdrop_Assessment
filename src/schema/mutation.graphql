@@ -1,0 +1,14 @@
+type Mutation {
+  createUser(
+    surname: String!,
+    firstname: String!,
+    email: String!,
+    password: String!
+  ): User!
+  loginUser(email: String!, password: String!): Login!
+  addBankAccount(
+    account_number: String!
+    account_name: String!
+    bank_code: String!
+  ): BankAccount!
+}
